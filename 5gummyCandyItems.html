@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CandyItems</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="../bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      .icon{
+      font-size:45px;
+      position:relative;
+      text-align: right;
+      bottom: 70px;
+    }
+    h2{
+      display: block;
+      font-weight: bold;
+      text-align: center;
+      background-color:#9c8c7a;
+      height: 60px;
+      font-size: xx-large;
+      color: white;
+    }
+      </style>
+</head>
+<body>
+  <h2 style="padding: 10px;">Gummy Candys</h2>
+  <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+<script>
+  let value=0
+
+  obj=[
+    {image:"./images/gummy1.webp",name:"Albanese Gummi Peach Rings",price:"₹ 388"},
+  {image:"./images/gummy2.webp",name:"Vidal Gummi Spicy Mango",price:"₹ 285"},
+  {image:"./images/gummy3.avif",name:"Vidal Blue Raspberry Gummi Drops", price:"₹ 215"},
+  {image:"./images/gummy4.jpg",name:"Albanese Pink Watermelon Gummi Rings", price:"₹ 280"},
+  {image:"./images/gummy5.jpg",name:"Albanese Assorted Colors Mini Gummi Butterflie", price:"₹ 198"},
+  {image:"./images/gummy6.webp",name:"Albanese Valentine Sour Gummy Hearts", price:"₹ 185"},
+  {image:"./images/gummy7.webp",name:"Vidal Gummi Glazed Donuts", price:"₹ 182"},
+  {image:"./images/gummy8.webp",name:"Albanese Sanded Gummi Eggs Eggstra Special Gummies", price:"₹ 186"},
+
+  {image:"./images/gummy9.webp",name:"Albanese Sanded Gummi Eggs Eggstra Special Gummies", price:"₹ 195"},
+  {image:"./images/gummy10.webp",name:"Albanese Gummi Beep Bears", price:"₹ 225"},
+  {image:"./images/gummy11.webp",name:"Vidal Gummi Ice Pops", price:"₹ 321"},
+  {image:"./images/gummy12.webp",name:"Vidal Gummi Large Cola Bottles", price:"₹ 278"},
+
+  {image:"./images/gummy13.webp",name:"Albanese Gummi Snow Flurries", price:"₹ 338"},
+  {image:"./images/gummy14.webp",name:"Vidal Gummi Tropical Drops",price:"₹ 198"},
+  {image:"./images/gummy15.webp",name:"Vidal Gummy Snowflakes", price:"₹ 185"},
+  {image:"./images/gummy16.webp",name:"Gustaf's Gummy Tropical Starfish", price:"₹ 296"}
+]
+let md=document.createElement("div")
+  document.body.appendChild(md);
+  md.setAttribute("style","width:100vw;display:flex;flex-direction:row;flex-wrap:wrap;gap:20px;justify-content:space-around")
+for(i of obj){
+  
+  let div1=document.createElement("div")
+  div1.setAttribute("style","border:0px solid black;height:470px;width:300px;border-radius:10px;box-shadow: rgba(3, 3, 14, 0.2) 0px 7px 29px 0px;")
+  let image=document.createElement("img");
+  image.setAttribute("src",i.image);
+  image.setAttribute("style","width:296px;height:270px;border-radius:10px")
+  let name=document.createElement("h1");
+  name.setAttribute("style",";font-size:22px;margin-top:30px;margin-left:5px")
+  let price=document.createElement("h3")
+  price.setAttribute("style","font-weight:bold;font-size:x-large;margin-top:20px;margin-left:10px")
+  let btn=document.createElement("button")
+  btn.setAttribute("style","class:button;margin-top:10px;width:130px;height:40px;border-radius:5px;margin-left:10px; background-color: #9c8c7a;border:none")
+  name.innerHTML=i.name
+  price.innerHTML=i.price
+  btn.innerHTML="Add Cart"
+  
+  btn.addEventListener("click",()=>{
+    value++
+    console.log(value)})
+    
+  div1.appendChild(image)
+  div1.appendChild(name)
+  div1.appendChild(price)
+  div1.appendChild(btn)
+  md.appendChild(div1)
+  
+}
+</script>
+</body>
+</html>    

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>candyTypes</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="../bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="search-container">
+        <input type="text" placeholder="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="md2 main-img">
+      <figure id="old">
+        <img src="./images/oldCandy.webp" alt="">
+        <figcaption>old candy</figcaption>
+      </figure>
+      <figure id="choclates">
+        <img src="./images/choclates.webp" alt="">
+        <figcaption>Choclate</figcaption>
+      </figure>
+      <figure id="bubblegum">
+        <img src="./images/bubblegum.webp" alt="">
+        <figcaption>Bubblegum</figcaption>
+      </figure>
+      <figure id="jelly">
+        <img src="./images/jellyCandy.webp" alt="">
+        <figcaption>Jelly Candy</figcaption>
+      </figure>
+      <figure id="gummy">
+        <img src="./images/GummyCandy.webp" alt="">
+        <figcaption>Gummy Candy</figcaption>
+      </figure>
+      <figure id="mint">
+        <img src="./images/mintCandy.webp" alt="">
+        <figcaption>Mint Candy</figcaption>
+      </figure>
+      <figure id="lollipop">
+        <img src="./images/lollipopCandy.webp" alt="">
+        <figcaption>Lollipops</figcaption>
+      </figure>
+      <figure id="hard">
+        <img src="./images/hardCandy.webp" alt="">
+        <figcaption>Hard Candy</figcaption>
+      </figure>
+    </div>
+    <script>
+      let old= document.getElementById("old")
+     old.addEventListener("click",()=>{
+      location.assign("./1oldCandyItems.html")
+     });
+     let choclates= document.getElementById("choclates")
+     choclates.addEventListener("click",()=>{
+      location.assign("./2choclateCandyItems.html")
+     });
+     let bubblegum= document.getElementById("bubblegum")
+     bubblegum.addEventListener("click",()=>{
+      location.assign("./3bubblegumCandyItems.html")
+     });
+     let jelly= document.getElementById("jelly")
+     jelly.addEventListener("click",()=>{
+      location.assign("./4jellyCandyItems.html")
+     });
+     let gummy= document.getElementById("gummy")
+     gummy.addEventListener("click",()=>{
+      location.assign("./5gummyCandyItems.html")
+     });
+     let mint= document.getElementById("mint")
+     mint.addEventListener("click",()=>{
+      location.assign("./6mintCandyItems.html")
+     });
+     let lollipop= document.getElementById("lollipop")
+     lollipop.addEventListener("click",()=>{
+      location.assign("./7lollipopCandyItems.html")
+     });
+     let hard= document.getElementById("hard")
+     hard.addEventListener("click",()=>{
+      location.assign("./8hardCandyItems.html")
+     });
+    </script>
+</body>
+</html>

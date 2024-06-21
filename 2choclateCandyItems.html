@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CandyItems</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="../bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      .icon{
+      font-size:45px;
+      position:relative;
+      text-align: right;
+      bottom: 70px;
+    }
+    h2{
+      display: block;
+      font-weight: bold;
+      text-align: center;
+      background-color:#9c8c7a;
+      height: 60px;
+      font-size: xx-large;
+      color: white;
+    }
+      </style>
+  </head>
+  <body>
+    <h2 style="padding: 10px;">Choclate candys</h2>
+    <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+  <script>
+  let value=0
+
+  obj=[
+    {image:"./images/choc1.webp",name:" Bergen Marzipan Bulk Tray",price:"₹ 500"},
+  {image:"./images/choc2.webp",name:"Merckens Cocoa Dark Melting Wafers",price:"₹ 255"},
+  {image:"./images/choc3.webp",name:"Merckens white Melting Wafers", price:"₹ 200"},
+  {image:"./images/choc4.jpg",name:"Hershey Good & Plenty Licorice Pastels", price:"₹ 200"},
+  {image:"./images/choc5.webp",name:"Koppers rum crodials", price:"₹ 199"},
+  {image:"./images/choc6.webp",name:"Koppers Pimento Olives Chocolate Covered Almonds", price:"₹ 275"},
+  {image:"./images/choc7.webp",name:"Asher Dark Chocolate Nonpareils White Seeds", price:"₹ 325"},
+  {image:"./images/choc8.webp",name:"Asher Dark Chocolate Break up", price:"₹ 215 "},
+
+  {image:"./images/choc9.avif",name:"Wilbur Buds Milk Chocolate", price:"₹ 200"},
+  {image:"./images/choc10.webp",name:"Asher Cordial Cherries Dark Chocolate Gold Foil", price:"₹ 110"},
+
+  {image:"./images/choc14.jpg",name:"Coated Chocolate Sea Shells", price:"₹ 245"},
+  {image:"./images/choc13.jpg",name:"Asher Death By Chocolate Fudge", price:"₹ 278"},
+  {image:"./images/choc12.webp",name:"Asher's Caramel Coated Caramello", price:"₹ 268"},
+  {image:"./images/choc11.webp",name:"Asher Dark Chocolate with Raspberry Jelly", price:"₹ 312"},
+  {image:"./images/choc15.webp",name:"Hershey Mini Reese Peanut Butter Cups Wrapped", price:"₹ 378"},
+  {image:"./images/choc16.webp",name:"Asher White Confectionary Chocolate Almond Bark", price:"₹ 195"}
+]
+let md=document.createElement("div")
+  document.body.appendChild(md);
+  md.setAttribute("style","width:100vw;display:flex;flex-direction:row;flex-wrap:wrap;gap:20px;justify-content:space-around")
+for(i of obj){
+  
+  let div1=document.createElement("div")
+  div1.setAttribute("style","border:0px solid black;height:470px;width:300px;border-radius:10px;box-shadow: rgba(3, 3, 14, 0.2) 0px 7px 29px 0px;")
+  let image=document.createElement("img");
+  image.setAttribute("src",i.image);
+  image.setAttribute("style","width:296px;height:270px;border-radius:10px")
+  let name=document.createElement("h1");
+  name.setAttribute("style",";font-size:22px;margin-top:30px;margin-left:5px")
+  let price=document.createElement("h3")
+  price.setAttribute("style","font-weight:bold;font-size:x-large;margin-top:20px;margin-left:10px")
+  let btn=document.createElement("button")
+  btn.setAttribute("style","class:button;margin-top:10px;width:130px;height:40px;border-radius:5px;margin-left:10px; background-color: #9c8c7a;border:none")
+  
+  name.innerHTML=i.name
+  price.innerHTML=i.price
+  btn.innerHTML="Add Cart"
+  
+  btn.addEventListener("click",()=>{
+    value++
+    console.log(value)})
+    
+  div1.appendChild(image)
+  div1.appendChild(name)
+  div1.appendChild(price)
+  div1.appendChild(btn)
+  md.appendChild(div1)
+  
+}
+</script>
+</body>
+</html>  
+</script>
+</body>
+</html>  

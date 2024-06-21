@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CandyItems</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="../bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+    .icon{
+    font-size:45px;
+    position:relative;
+    text-align: right;
+    bottom: 70px;
+  }
+  h2{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    background-color:#9c8c7a;
+    height: 60px;
+    font-size: xx-large;
+    color: white;
+  }
+    </style>
+</head>
+<body>
+  <h2 style="padding: 10px;">Bubble Gum candys</h2>
+  <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+<script>
+  let value=0;
+  let icon= document.getElementsByClassName("icon")[0]
+     icon.addEventListener("click",()=>{
+      location.assign("./cart.html")
+     });
+
+  obj=[
+    {image:"./images/bg1.webp",name:" concord Double Bubble 1 inch Assorted Gumballs",price:"₹ 98"},
+  {image:"./images/bg2.jpg",name:"Teaberry Chewing Gum",price:"₹ 225"},
+  {image:"./images/bg3.webp",name:"Bazooka Bubble Gum Wallet Pack", price:"₹ 235"},
+  {image:"./images/bg4.jpg",name:"Concord Razzles Sour", price:"₹ 210"},
+  
+  {image:"./images/bg5.jpg",name:"Concord Tearjerker Guts", price:"₹ 138"},
+  {image:"./images/bg6.webp",name:"Bazooka Original Tub 225ct Tub", price:"₹ 155"},
+  {image:"./images/bg7.webp",name:"Blue Raspberry Airheads Gum", price:"₹ 167"},
+  {image:"./images/bg8.avif",name:"Bazooka Party Box Theater Size Box", price:"₹ 96"},
+
+  {image:"./images/bg9.jpg",name:"Chowards Scented Gum", price:"₹ 155"},
+  {image:"./images/bg10.jpg",name:"Swell Big Choice 1 Gum Cigars", price:"₹ 195"},
+  {image:"./images/bg11.webp",name:"Hubba Bubba Bubble Tape Original", price:"₹ 240"},
+  {image:"./images/bg12.webp",name:"Kidsmania Bubble Big Jackpot Gumball Machines", price:"₹ 138"},
+
+  {image:"./images/bg13.webp",name:"Swell Big Choice II Assorted Cigars", price:"₹ 218"},
+  {image:"./images/bg14.webp",name:"Bubblicious Strawberry",price:"₹ 158"},
+  {image:"./images/bg15.webp",name:"Concord Double Bubble Bubblegum", price:"₹ 195"},
+  {image:"./images/bg16.webp",name:"Concord Dubble Bubble Gumball Refills Pouch", price:"₹ 276"}
+]
+let md=document.createElement("div")
+  document.body.appendChild(md);
+  md.setAttribute("style","width:100vw;display:flex;flex-direction:row;flex-wrap:wrap;gap:20px;justify-content:space-around")
+for(i of obj){
+  
+  let div1=document.createElement("div")
+  div1.setAttribute("style","border:0px solid black;height:470px;width:300px;border-radius:10px;box-shadow: rgba(3, 3, 14, 0.2) 0px 7px 29px 0px;")
+  let image=document.createElement("img");
+  image.setAttribute("src",i.image);
+  image.setAttribute("style","width:296px;height:270px;border-radius:10px")
+  let name=document.createElement("h1");
+  name.setAttribute("style",";font-size:22px;margin-top:30px;margin-left:5px")
+  let price=document.createElement("h3")
+  price.setAttribute("style","font-weight:bold;font-size:x-large;margin-top:20px;margin-left:10px")
+  let btn=document.createElement("button")
+  btn.setAttribute("style","class:button;margin-top:10px;width:130px;height:40px;border-radius:5px;margin-left:10px; background-color: #9c8c7a;border:none")
+  
+  name.innerHTML=i.name
+  price.innerHTML=i.price
+  btn.innerHTML="Add Cart"
+  
+  btn.addEventListener("click",()=>{
+    value++
+    console.log(value)});
+    // btn.addEventListener("focus",()=>{
+    //   btn.style.backgroundColor="green"
+    // });
+  div1.appendChild(image)
+  div1.appendChild(name)
+  div1.appendChild(price)
+  div1.appendChild(btn)
+  md.appendChild(div1)
+}
+ 
+</script>
+</body>
+</html>  

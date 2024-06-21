@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CandyItems</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="../bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    
+    <style>
+      .icon{
+      font-size:45px;
+      position:relative;
+      text-align: right;
+      bottom: 70px;
+    }
+    h2{
+      display: block;
+      font-weight: bold;
+      text-align: center;
+      background-color:#9c8c7a;
+      height: 60px;
+      font-size: xx-large;
+      color: white;
+    }
+    </style>
+</head>
+<body>
+  <h2 style="padding: 10px;">Choclate Candys</h2>
+  <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+<script>
+  let value=0
+
+  obj=[
+    {
+      image:"./images/mint1.webp",
+    name:" Koppers Mint Cookie Malt Balls",
+    price:"₹ 216"
+  },
+  {
+    image:"./images/mint2.jpg",name:"Asher Thin Mint Dark Chocolate",price:"₹ 315"},
+  {image:"./images/min3.avif",name:"Richardson Pastel Mints", price:"₹ 425"},
+  {image:"./images/mint4.avif",name:"Koppers Mint Lentils", price:"₹ 510"},
+  {image:"./images/mint5.jpg",name:"Arcor Peppermint Starlight Mints", price:"₹ 176"},
+  {image:"./images/mint6.webp",name:"Quality Candy Assorted Fruit Spinners", price:"₹ 290"},
+  {image:"./images/mint7.webp",name:"Tootsie Junior Mints", price:"₹ 169"},
+  {image:"./images/mint8.webp",name:"Quality Candy Spearmint Starlight Mints", price:"₹ 157"},
+  {image:"./images/mint9.webp",name:"Quality Candy Jar Favorites Assorted Hard Candy", price:"₹ 198"},
+  {image:"./images/mint10.jpg",name:"Asher Dark Thin Mint Patties", price:"₹ 215"},
+  {image:"./images/mint11.webp",name:"Asher Sugar Free Milk Chocolate Mint Truffle", price:"₹ 238"},
+  {image:"./images/mint12.webp",name:"Chowards Peppermint Mints", price:"₹ 152"},
+  {image:"./images/mint13.webp",name:"Asher Mint Smoothie Milk Chocolate", price:"₹ 129"},
+  {image:"./images/mint14.webp",name:"Asher Dark Chocolate French Mint Truffle", price:"₹ 98"},
+  {image:"./images/mint15.webp",name:"Arcor Crystal Mint", price:"₹ 199"},
+  {image:"./images/mint16.webp",name:"Quality Candy Butterscotch Discs", price:"₹ 215"}
+]
+
+let md=document.createElement("div")
+  document.body.appendChild(md);
+  md.setAttribute("style","width:100vw;display:flex;flex-direction:row;flex-wrap:wrap;gap:20px;justify-content:space-around")
+for(i of obj){
+  
+  let div1=document.createElement("div")
+  div1.setAttribute("style","border:0px solid black;height:470px;width:300px;border-radius:10px;box-shadow: rgba(3, 3, 14, 0.2) 0px 7px 29px 0px;")
+  let image=document.createElement("img");
+  image.setAttribute("src",i.image);
+  image.setAttribute("style","width:296px;height:270px;border-radius:10px")
+  let name=document.createElement("h1");
+  name.setAttribute("style",";font-size:22px;margin-top:30px;margin-left:5px")
+  let price=document.createElement("h3")
+  price.setAttribute("style","font-weight:bold;font-size:x-large;margin-top:20px;margin-left:10px")
+  let btn=document.createElement("button")
+  btn.setAttribute("style","class:button;margin-top:10px;width:130px;height:40px;border-radius:5px;margin-left:10px; background-color: #9c8c7a;border:none")
+  
+  name.innerHTML=i.name;
+  price.innerHTML=i.price;
+  btn.innerHTML="Add Cart";
+  
+  btn.addEventListener("click",()=>{
+    value++
+    console.log(value)})
+    
+  div1.appendChild(image)
+  div1.appendChild(name)
+  div1.appendChild(price)
+  div1.appendChild(btn)
+  md.appendChild(div1)
+  
+}
+</script>
+</body>
+</html>  

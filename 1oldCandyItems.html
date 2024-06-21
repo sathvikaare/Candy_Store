@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CandyItems</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="../bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      .icon{
+      font-size:45px;
+      position:relative;
+      text-align: right;
+      bottom: 70px;
+    }
+    h2{
+      display: block;
+      font-weight: bold;
+      text-align: center;
+      background-color:#9c8c7a;
+      height: 60px;
+      font-size: xx-large;
+      color: white;
+    }
+      </style>
+  </head>
+  <body>
+    <h2 style="padding: 10px;">Old candys</h2>
+    <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+  <script>
+  let value=0
+
+  obj=[
+    {image:"./images/old18.jpg",name:" Smarties Candy Necklaces",price:"₹ 185"},
+  {image:"./images/old19.webp",name:"efrutti Sour Gummy Burgers",price:"₹ 240"},
+  {image:"./images/old20.webp",name:"Goetze Cow Tales Caramel Brownie", price:"₹ 98"},
+  {image:"./images/old21.jpg",name:"Starburst Original Fruit Chews", price:"₹ 250"},
+  {image:"./images/old22.webp",name:"Iconic Reed's Cinnamon Hard Candy Rolls", price:"₹ 190"},
+  {image:"./images/old23.jpg",name:"Pop Rocks Blue Raspberry", price:"₹ 72"},
+  {image:"./images/old24.webp",name:"Spangler Starburst Pops", price:"₹ 135"},
+  {image:"./images/old25.jpg",name:"Goetze Cow Tales Caramel Brownie", price:"₹ 98 "},
+  {image:"./images/old6.jpg",name:"Hershey Good & Plenty Licorice Pastels", price:"₹ 200"},
+  {image:"./images/old5.jpg",name:"Tootsie Caramel Apple Pops", price:"₹ 300"},
+  {image:"./images/old7.webp",name:"Laffy Taffy Banana", price:"₹ 250"},
+  {image:"./images/old8.webp",name:"Smarties Bulk", price:"₹ 280"},
+  {image:"./images/old9.jpg",name:"Asher Mint Smoothie Milk Chocolate", price:"₹ 230"},
+  {image:"./images/old10.webp",name:"Asher Dark Chocolate French Mint Truffle", price:"₹ 320"},
+  {image:"./images/old13.webp",name:"Alberts Fruit Chews Strawberry", price:"₹ 110"},
+  {image:"./images/old17.jpg",name:"Giant Smarties 20 Tablets", price:"₹ 110"}
+]
+// burger=document.querySelector('.burger');
+// navbarList=document.querySelector(".navbar");
+// nav=document.querySelector('.items');
+
+// burger.addEventListener('click',()=>{
+//     navbarList.classList.toggle('h-class')
+//     nav.classList.toggle('v-class')
+// })
+let md=document.createElement("div")
+  document.body.appendChild(md);
+  md.setAttribute("style","width:100vw;display:flex;flex-direction:row;flex-wrap:wrap;gap:20px;justify-content:space-around")
+for(i of obj){
+  
+  let div1=document.createElement("div")
+  div1.setAttribute("style","border:0px solid black;height:470px;width:300px;border-radius:10px;box-shadow: rgba(3, 3, 14, 0.2) 0px 7px 29px 0px;")
+  let image=document.createElement("img");
+  image.setAttribute("src",i.image);
+  image.setAttribute("style","width:296px;height:270px;border-radius:10px")
+  let name=document.createElement("h1");
+  name.setAttribute("style",";font-size:22px;margin-top:30px;margin-left:5px")
+  let price=document.createElement("h3")
+  price.setAttribute("style","font-weight:bold;font-size:x-large;margin-top:20px;margin-left:10px")
+  let btn=document.createElement("button")
+  btn.setAttribute("style","class:button;margin-top:10px;width:130px;height:40px;border-radius:5px;margin-left:10px; background-color: #9c8c7a;border:none")
+  
+  name.innerHTML=i.name
+  price.innerHTML=i.price
+  btn.innerHTML="Add Cart"
+  
+  btn.addEventListener("click",()=>{
+    value++
+    console.log(value)
+})
+  div1.appendChild(image)
+  div1.appendChild(name)
+  div1.appendChild(price)
+  div1.appendChild(btn)
+  md.appendChild(div1)
+  
+}
+</script>
+</body>
+</html>  

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CandyItems</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="../bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+        .cart{
+            font-size: 28px;
+        }
+        .container{
+            display: flex;
+            width:100%;
+            margin-bottom: 30px;
+        }
+        #root{
+            /* width: 60%; */
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 20px;
+        }
+        .sidebar{
+            /* width: 40%; */
+            width: 100%;
+            border-radius: 5px;
+            background-color: #eee;
+            margin-left:20px;
+            padding: 15px;
+            text-align: center;
+        }
+        .head{
+            background-color: chocolate;
+            border-radius: 3px;
+            height: 40px;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .foot{
+            display:flex;
+            justify-content:space-between;
+            margin:20px 0px;
+            padding: 10px 0px;
+            border-top: 1px solid#333;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div> -->
+    <div class="container">
+        <div id="root"></div>
+        <div class="sidebar">
+            <div class="head"><p>My Cart</p></div>
+            <div id="cartItem">Your cart is empty</div>
+            <div class="foot">
+                <h3>Total</h3>
+                <h2 id="total">₹  0.00</h2>
+            </div>
+        </div>
+    </div>
+<script>
+</script>
+</body>
+</html>
